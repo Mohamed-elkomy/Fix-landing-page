@@ -1,0 +1,86 @@
+.contactPage {
+  padding: 72px 0;
+}
+
+/* Titles */
+.contactTitle {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.contactSubtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+/* Card */
+.contactCard {
+  background: #ffffff;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* Info */
+.infoBlock {
+  margin-bottom: 8px;
+}
+
+.infoTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.infoBlock ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.infoBlock li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+}
+
+/* Divider */
+.divider {
+  margin: 24px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ================= Tablet ================= */
+@media (max-width: 992px) {
+  .contactPage {
+    padding: 56px 0;
+  }
+
+  .contactTitle {
+    font-size: 28px;
+  }
+
+  .contactCard {
+    padding: 26px;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+  .contactPage {
+    padding: 40px 0;
+  }
+
+  .contactTitle {
+    font-size: 24px;
+  }
+
+  .contactSubtitle {
+    font-size: 16px;
+  }
+
+  .contactCard {
+    padding: 22px;
+  }
+}

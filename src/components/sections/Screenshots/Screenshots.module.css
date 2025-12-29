@@ -1,0 +1,81 @@
+/* ================= Section ================= */
+.screensSection {
+  padding: 80px 0;
+  background-color: var(--bg-primary);
+}
+
+/* ================= Titles ================= */
+.title {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-bottom: 42px;
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+/* ================= Swiper ================= */
+.screensSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ================= Card ================= */
+.screenCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================= Phone Frame ================= */
+.phoneFrame {
+  max-width: 260px;
+  margin: 0 auto;
+  padding: 8px;
+  transition: transform 0.4s ease;
+}
+
+.screenCard:hover .phoneFrame {
+  transform: translateY(-6px);
+}
+
+/* ================= Image ================= */
+.screenImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 26px;
+  display: block;
+  filter: drop-shadow(0 rgba(0, 0, 0, 0.18));
+}
+
+/* ================= Tablet ================= */
+@media (max-width: 992px) {
+  .phoneFrame {
+    max-width: 240px;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+  .screensSection {
+    padding: 60px 0;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .phoneFrame {
+    max-width: 220px;
+  }
+}

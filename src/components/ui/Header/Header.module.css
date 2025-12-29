@@ -1,0 +1,144 @@
+/* ================= Base Navbar ================= */
+.navbar {
+  background-color: var(--bg-primary) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 64px;
+}
+
+/* ================= Logo ================= */
+.brandLogo {
+  width: 140px;
+  max-width: 60vw;
+  height: auto;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+/* ================= Desktop Nav Links ================= */
+.navLink {
+  text-decoration: none !important;
+  color: var(--text-primary) !important;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 999px;
+  padding: 6px 14px !important;
+  transition: background-color var(--transition-base),
+    color var(--transition-base), transform var(--transition-fast);
+}
+
+.navLink:hover {
+  background-color: var(--accent);
+  color: #000 !important;
+  transform: translateY(-1px);
+}
+
+.active {
+  background-color: var(--accent);
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* ================= Navbar Toggler ================= */
+.navbarToggler {
+  box-shadow: none !important;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.navbarToggler:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.navbarToggler:active {
+  transform: scale(0.95);
+}
+
+/* ================= Offcanvas ================= */
+.offcanvas {
+  width: 260px !important;
+  direction: rtl !important;
+  text-align: right;
+}
+
+/* --- Offcanvas Header FIX (RTL) --- */
+.offcanvasHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: row-reverse; */
+}
+
+.offcanvasHeader .btn-close {
+  margin: 0;
+}
+
+/* Logo inside offcanvas */
+.offcanvasLogo {
+  width: 110px;
+  height: auto;
+}
+
+/* --- Offcanvas Body FIX --- */
+.offcanvasBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-top: 10px;
+}
+
+.offcanvasLink {
+  font-size: 16px !important;
+  color: var(--text-primary) !important;
+  padding: 10px 12px;
+  border-radius: 10px;
+  transition: color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.offcanvasLink:hover {
+  color: var(--accent) !important;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* ================= Accessibility ================= */
+.navLink:focus-visible,
+.offcanvasLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ================= Responsive ================= */
+
+/* Tablet */
+@media (max-width: 991px) {
+  .navbar {
+    padding: 8px 0;
+  }
+
+  .brandLogo {
+    width: 120px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 6px 0;
+  }
+
+  .brandLogo {
+    width: 105px;
+  }
+
+  .offcanvas {
+    width: 85% !important;
+  }
+
+  .offcanvasLink {
+    font-size: 17px !important;
+    padding: 14px 14px;
+    text-decoration: none !important;
+  }
+}

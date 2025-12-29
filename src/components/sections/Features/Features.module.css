@@ -1,0 +1,153 @@
+/* ================= Section ================= */
+.featuresSection {
+  padding: 80px 0;
+  background-color: var(--bg-primary);
+}
+
+/* ================= Titles ================= */
+.featuresTitle {
+  font-size: 34px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.featuresSubtitle {
+  font-size: 20px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ================= Swiper ================= */
+.featuresSwiper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  width: auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= Card ================= */
+.featureCard {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: 28px 26px 30px;
+
+  min-width: 300px;
+  max-width: 360px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  direction: rtl;
+  text-align: right;
+
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.14);
+}
+
+/* ================= Content ================= */
+.icon {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.featureCard h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.featureCard p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ================= Small Laptop ================= */
+@media (max-width: 1200px) {
+  .featureCard {
+    min-width: 320px;
+  }
+}
+
+/* ================= Tablet ================= */
+@media (max-width: 992px) {
+  .featuresSection {
+    padding: 70px 0;
+  }
+
+  .featureCard {
+    min-width: 300px;
+  }
+
+  .icon {
+    font-size: 34px;
+  }
+
+  .featureCard h3 {
+    font-size: 20px;
+  }
+
+  .featureCard p {
+    font-size: 16px;
+  }
+}
+
+/* ================= Mobile ================= */
+@media (max-width: 576px) {
+  .featuresSection {
+    padding: 60px 0;
+  }
+
+  .featuresSubtitle {
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
+
+  .slide {
+    justify-content: center;
+  }
+
+  .featureCard {
+    min-width: 88vw;
+    max-width: 88vw;
+    padding: 26px 22px;
+  }
+
+  .icon {
+    font-size: 32px;
+  }
+
+  .featureCard h3 {
+    font-size: 18px;
+  }
+
+  .featureCard p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+/* ================= Reduced Motion ================= */
+@media (prefers-reduced-motion: reduce) {
+  .featureCard,
+  .featureCard:hover {
+    transition: none;
+    transform: none;
+  }
+}
