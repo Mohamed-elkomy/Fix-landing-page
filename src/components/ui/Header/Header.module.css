@@ -1,13 +1,13 @@
 /* ================= Base Navbar ================= */
 .navbar {
-  background-color: var(--bg-primary) !important;
+  background-color: var(--bg-primary);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   min-height: 64px;
 }
 
 /* ================= Logo ================= */
 .brandLogo {
-  width: 140px;
+  width: 150px;
   max-width: 60vw;
   height: auto;
   cursor: pointer;
@@ -18,10 +18,10 @@
 .navLink {
   text-decoration: none !important;
   color: var(--text-primary) !important;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
   border-radius: 999px;
-  padding: 6px 14px !important;
+  padding: 6px 16px !important;
   transition: background-color var(--transition-base),
     color var(--transition-base), transform var(--transition-fast);
 }
@@ -30,12 +30,24 @@
   background-color: var(--accent);
   color: #000 !important;
   transform: translateY(-1px);
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    rgba(254, 215, 0, 0.65) 50%,
+    rgba(254, 215, 0, 0.35) 100%
+  );
 }
 
 .active {
   background-color: var(--accent);
   color: #000 !important;
   font-weight: 600;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    rgba(254, 215, 0, 0.65) 50%,
+    rgba(254, 215, 0, 0.35) 100%
+  );
 }
 
 /* ================= Navbar Toggler ================= */
@@ -67,6 +79,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 16px;
   /* flex-direction: row-reverse; */
 }
 
@@ -76,7 +89,7 @@
 
 /* Logo inside offcanvas */
 .offcanvasLogo {
-  width: 110px;
+  width: 120px;
   height: auto;
 }
 
@@ -86,6 +99,7 @@
   flex-direction: column;
   gap: 14px;
   padding-top: 10px;
+  padding: 16px;
 }
 
 .offcanvasLink {
@@ -93,6 +107,7 @@
   color: var(--text-primary) !important;
   padding: 10px 12px;
   border-radius: 10px;
+  font-size: 17px;
   transition: color var(--transition-base),
     background-color var(--transition-base);
 }
@@ -107,6 +122,12 @@
 .offcanvasLink:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent) 0%,
+    rgba(254, 215, 0, 0.6) 100%
+  );
+  font-weight: 600;
 }
 
 /* ================= Responsive ================= */

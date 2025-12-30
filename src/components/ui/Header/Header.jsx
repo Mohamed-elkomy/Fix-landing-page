@@ -46,14 +46,13 @@ export default function Header() {
             <nav
                 role="navigation"
                 aria-label="Main navigation"
-                className={`navbar navbar-expand-lg shadow-sm py-2 sticky-top ${styles.navbar}`}
+                className={`navbar navbar-expand-lg sticky-top ${styles.navbar}`}
             >
                 <div className="container d-flex align-items-center justify-content-between">
                     {/* Mobile Toggler */}
                     <button
-                        className={`navbar-toggler border-0 ${styles.navbarToggler}`}
+                        className={`navbar-toggler ${styles.navbarToggler}`}
                         type="button"
-                        aria-label="فتح القائمة"
                         aria-expanded={isOpen}
                         onClick={() => offcanvasInstanceRef.current?.toggle()}
                     >
@@ -64,7 +63,7 @@ export default function Header() {
                     <Link className="navbar-brand" to="/">
                         <img
                             src={logo}
-                            alt="FIX - بيع وشراء الأجهزة بسهولة وأمان"
+                            alt="FIX"
                             className={styles.brandLogo}
                         />
                     </Link>
@@ -78,7 +77,6 @@ export default function Header() {
                             <NavItem to="/terms" label="الشروط والأحكام" />
                         </ul>
 
-                        {/* WhatsApp Button */}
                         <a
                             href={WHATSAPP_LINK}
                             target="_blank"
@@ -91,34 +89,31 @@ export default function Header() {
                 </div>
             </nav>
 
-            {/* ================= Offcanvas (Mobile) ================= */}
+            {/* ================= Offcanvas ================= */}
             <div
                 ref={offcanvasRef}
                 className={`offcanvas offcanvas-end ${styles.offcanvas}`}
                 tabIndex="-1"
                 dir="rtl"
             >
-                <div className={`offcanvas-header ${styles.offcanvasHeader}`}>
-                    <img
-                        src={logo}
-                        alt="FIX - بيع وشراء الأجهزة بسهولة وأمان"
-                        className={styles.offcanvasLogo}
-                    />
+                <div className={styles.offcanvasHeader}>
+                    <img src={logo} alt="FIX" className={styles.offcanvasLogo} />
                 </div>
 
-                <div className={`offcanvas-body ${styles.offcanvasBody}`}>
+                <div className={styles.offcanvasBody}>
                     <MobileLink to="/" label="الرئيسية" />
                     <MobileLink to="/privacy" label="سياسة الخصوصية" />
                     <MobileLink to="/returns" label="سياسة الاسترجاع" />
                     <MobileLink to="/terms" label="الشروط والأحكام" />
 
-                    {/* WhatsApp Button */}
                     <a
                         href={WHATSAPP_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`w-100 mt-3 ${buttons.primaryBtn}`}
-                        onClick={() => offcanvasInstanceRef.current?.hide()}
+                        onClick={() =>
+                            offcanvasInstanceRef.current?.hide()
+                        }
                     >
                         تواصل معنا 💬
                     </a>
@@ -136,7 +131,7 @@ function NavItem({ to, label }) {
             <NavLink
                 to={to}
                 className={({ isActive }) =>
-                    `nav-link ${styles.navLink} ${isActive ? styles.active : ""}`
+                    `${styles.navLink} ${isActive ? styles.active : ""}`
                 }
             >
                 {label}
@@ -147,8 +142,13 @@ function NavItem({ to, label }) {
 
 function MobileLink({ to, label }) {
     return (
-        <Link to={to} className={styles.offcanvasLink}>
+        <NavLink
+            to={to}
+            className={({ isActive }) =>
+                `${styles.offcanvasLink} ${isActive ? styles.active : ""}`
+            }
+        >
             {label}
-        </Link>
+        </NavLink>
     );
 }
