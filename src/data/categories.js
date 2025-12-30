@@ -1,6 +1,6 @@
-import mobiles from "../assets/images/categories/mobiles.png";
+import mobiles from "../assets/images/categories/Mobiles.png";
 import headphones from "../assets/images/categories/Headphones.png";
-import watches from "../assets/images/categories/Smart Watches.png";
+import watches from "../assets/images/categories/SmartWatches.png";
 import chargers from "../assets/images/categories/Chargers.png";
 import accessories from "../assets/images/categories/Accessories.png";
 
