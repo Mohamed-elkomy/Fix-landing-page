@@ -52,14 +52,14 @@ export default function Hero() {
               loop
               slidesPerView={1}
               centeredSlides
-              className={styles.heroSwiper}
+              className={`${styles.heroSwiper}`}
             >
               {[screen1, screen2, screen3].map((img, index) => (
-                <SwiperSlide key={index}>
+                <SwiperSlide className="d-flex justify-content-center align-content-center" key={index}>
                   <img
                     src={img}
                     alt={`FIX App Screen ${index + 1}`}
-                    className={styles.heroImg}
+                    className={` ${styles.heroImg}`}
                     loading="lazy"
                   />
                 </SwiperSlide>

@@ -71,7 +71,7 @@
   height: 260px;
   background: radial-gradient(
     circle,
-    rgba(254, 215, 0, 0.18) 0%,
+    rgba(198, 174, 41, 0.18) 0%,
     rgba(254, 215, 0, 0) 70%
   );
   filter: blur(20px);
@@ -190,10 +190,12 @@
     align-items: center;
     margin-top: 32px;
     height: 100%;
+    width: 100%;
   }
   .heroSwiper {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .heroImg {
